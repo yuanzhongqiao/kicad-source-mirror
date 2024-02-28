@@ -1,58 +1,53 @@
-# KiCad README
-
-For specific documentation about [building KiCad](https://dev-docs.kicad.org/en/build/), policies
-and guidelines, and source code documentation see the
-[Developer Documentation](https://dev-docs.kicad.org) website.
-
-You may also take a look into the [Wiki](https://gitlab.com/kicad/code/kicad/-/wikis/home),
-the [contribution guide](https://dev-docs.kicad.org/en/contribute/).
-
-For general information about KiCad and information about contributing to the documentation and
-libraries, see our [Website](https://kicad.org/) and our [Forum](https://forum.kicad.info/).
-
-## Build state
-
-KiCad uses a host of CI resources.
-
-GitLab CI pipeline status can be viewed for Linux and Windows builds of the latest commits.
-
-## Release status
-[![latest released version(s)](https://repology.org/badge/latest-versions/kicad.svg)](https://repology.org/project/kicad/versions)
-[![Release status](https://repology.org/badge/tiny-repos/kicad.svg)](https://repology.org/metapackage/kicad/versions)
-
-## Files
-* [AUTHORS.txt](AUTHORS.txt) - The authors, contributors, document writers and translators list
-* [CMakeLists.txt](CMakeLists.txt) - Main CMAKE build tool script
-* [copyright.h](copyright.h) - A very short copy of the GNU General Public License to be included in new source files
-* [Doxyfile](Doxyfile) - Doxygen config file for KiCad
-* [INSTALL.txt](INSTALL.txt) - The release (binary) installation instructions
-* [uncrustify.cfg](uncrustify.cfg) - Uncrustify config file for uncrustify sources formatting tool
-* [_clang-format](_clang-format) - clang config file for clang-format sources formatting tool
-
-## Subdirectories
-
-* [3d-viewer](3d-viewer)         - Sourcecode of the 3D viewer
-* [bitmap2component](bitmap2component)  - Sourcecode of the bitmap to PCB artwork converter
-* [cmake](cmake)      - Modules for the CMAKE build tool
-* [common](common)            - Sourcecode of the common library
-* [cvpcb](cvpcb)             - Sourcecode of the CvPCB tool
-* [demos](demos)             - Some demo examples
-* [doxygen](doxygen)     - Configuration for generating pretty doxygen manual of the codebase
-* [eeschema](eeschema)          - Sourcecode of the schematic editor
-* [gerbview](gerbview)          - Sourcecode of the gerber viewer
-* [include](include)           - Interfaces to the common library
-* [kicad](kicad)             - Sourcecode of the project manager
-* [libs](libs)           - Sourcecode of KiCad utilities (geometry and others)
-* [pagelayout_editor](pagelayout_editor) - Sourcecode of the pagelayout editor
-* [patches](patches)           - Collection of patches for external dependencies
-* [pcbnew](pcbnew)           - Sourcecode of the printed circuit board editor
-* [plugins](plugins)           - Sourcecode for the 3D viewer plugins
-* [qa](qa)                - Unit testing framework for KiCad
-* [resources](resources)         - Packaging resources such as bitmaps and operating system specific files
-    - [bitmaps_png](resources/bitmaps_png)       - Menu and program icons
-    - [project_template](resources/project_template)          - Project template
-* [scripting](scripting)         - Python integration for KiCad
-* [thirdparty](thirdparty)           - Sourcecode of external libraries used in KiCad but not written by the KiCad team
-* [tools](tools)             - Helpers for developing, testing and building
-* [translation](translation) - Translation data files (managed through [Weblate](https://hosted.weblate.org/projects/kicad/master-source/) for most languages)
-* [utils](utils)             - Small utils for KiCad, e.g. IDF, STEP, and OGL tools and converters
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KiCad 自述文件</font></font></h1><a id="user-content-kicad-readme" class="anchor-element" aria-label="永久链接：KiCad 自述文件" href="#kicad-readme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关</font></font><a href="https://dev-docs.kicad.org/en/build/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建 KiCad 的</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">具体文档、政策和指南以及源代码文档，请参阅
+</font></font><a href="https://dev-docs.kicad.org" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您还可以查看</font></font><a href="https://gitlab.com/kicad/code/kicad/-/wikis/home" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wiki</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://dev-docs.kicad.org/en/contribute/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献指南</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关 KiCad 的一般信息以及有关为文档和库做出贡献的信息，请参阅我们的</font></font><a href="https://kicad.org/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://forum.kicad.info/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">构建状态</font></font></h2><a id="user-content-build-state" class="anchor-element" aria-label="永久链接：构建状态" href="#build-state"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">KiCad 使用大量 CI 资源。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以查看最新提交的 Linux 和 Windows 版本的 GitLab CI 管道状态。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发布状态</font></font></h2><a id="user-content-release-status" class="anchor-element" aria-label="永久链接：发布状态" href="#release-status"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://repology.org/project/kicad/versions" rel="nofollow"><img src="https://camo.githubusercontent.com/a3ce6c6dcaf02f2cf7d754c57840ab1bd508b8014e4f501317fe4dedc3005e0a/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f6c61746573742d76657273696f6e732f6b696361642e737667" alt="最新发布的版本" data-canonical-src="https://repology.org/badge/latest-versions/kicad.svg" style="max-width: 100%;"></a>
+<a href="https://repology.org/metapackage/kicad/versions" rel="nofollow"><img src="https://camo.githubusercontent.com/d9295759cb2931fdaa958727d2a435e175249d81dc6d31b08a18a4f16e3e066f/68747470733a2f2f7265706f6c6f67792e6f72672f62616467652f74696e792d7265706f732f6b696361642e737667" alt="发布状态" data-canonical-src="https://repology.org/badge/tiny-repos/kicad.svg" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件</font></font></h2><a id="user-content-files" class="anchor-element" aria-label="永久链接：文件" href="#files"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="/KiCad/kicad-source-mirror/blob/master/AUTHORS.txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AUTHORS.txt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 作者、贡献者、文档作者和翻译者列表</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/CMakeLists.txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CMakeLists.txt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 主要 CMAKE 构建工具脚本</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/copyright.h"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">copyright.h</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - GNU 通用公共许可证的一个非常短的副本，将包含在新的源文件中</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/Doxyfile"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Doxyfile</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - KiCad 的 Doxygen 配置文件</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/INSTALL.txt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">INSTALL.txt</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 发行版（二进制）安装说明</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/uncrustify.cfg"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">uncrustify.cfg</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 用于 uncrustify 源格式化工具的 Uncrustify 配置文件</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/_clang-format"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">_clang-format</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - clang-format 源格式化工具的 clang 配置文件</font></font></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">子目录</font></font></h2><a id="user-content-subdirectories" class="anchor-element" aria-label="永久链接：子目录" href="#subdirectories"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="/KiCad/kicad-source-mirror/blob/master/3d-viewer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3d-viewer</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">          - 3D 查看器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/bitmap2component"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bitmap2component</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">   - 位图到 PCB 图稿转换器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/cmake"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cmake</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">       - CMAKE 构建工具的模块</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/common"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">common</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">             - 公共库的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/cvpcb"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cvpcb</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">              - CvPCB 工具的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/demos"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">demos</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">              - 一些演示示例</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/doxygen"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">doxygen</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">      - 用于生成漂亮的 doxygen 代码库手册的配置</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/eeschema"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">eeschema</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">           - 原理图编辑器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/gerbview"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gerbview</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">           - gerber 查看器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/include"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">include</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">            - 公共库的接口</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/kicad"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">kicad</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">              - 项目管理器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/libs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">libs</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">            - KiCad 实用程序的源代码（几何和其他）</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/pagelayout_editor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pagelayout_editor</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 页面布局编辑器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/patches"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">patch</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">            - 外部依赖项的补丁集合</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/pcbnew"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pcbnew</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">            - 印刷电路板编辑器的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/plugins"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">插件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">           - 3D 查看器插件的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/qa"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">qa</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">                 - KiCad 的单元测试框架</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/resources"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">resources</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">          - 打包资源，例如位图和操作系统特定文件
+</font></font><ul dir="auto">
+<li><a href="/KiCad/kicad-source-mirror/blob/master/resources/bitmaps_png"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bitmaps_png</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">        - 菜单和程序图标</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/resources/project_template"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">project_template</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">           - 项目模板</font></font></li>
+</ul>
+</li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/scripting"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">脚本编写</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">         - KiCad 的 Python 集成</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/thirdparty"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">第三方</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">           - KiCad 中使用但不是由 KiCad 团队编写的外部库的源代码</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/tools"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">工具</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">             - 开发、测试和构建的助手</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/translation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">翻译</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- 翻译数据文件（通过</font></font><a href="https://hosted.weblate.org/projects/kicad/master-source/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weblate</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">管理大多数语言）</font></font></li>
+<li><a href="/KiCad/kicad-source-mirror/blob/master/utils"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">utils</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">              - KiCad 的小型实用程序，例如 IDF、STEP 和 OGL 工具和转换器</font></font></li>
+</ul>
+</article></div>
